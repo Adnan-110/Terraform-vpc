@@ -3,4 +3,11 @@
 AZ                  = ["us-east-1a", "us-east-1b"]
 DEFAULT_VPC_CIDR    = "172.31.0.0/16"
 DEFAULT_VPC_ID      = "vpc-07dfb2010ac005d23"
-DEFAULT_VPC_RT      = "rtb-0d4b4cc1d61218aea" 
+DEFAULT_VPC_RT      = "rtb-0d4b4cc1d61218aea"
+
+
+# PUBLIC_HOSTED_ZONE_ID
+# PUBLIC_HOSTED_ZONE_NAME
+
+PRIVATE_HOSTED_ZONE_ID   = "Z0076916BR5CY6A72YNB"
+PRIVATE_HOSTED_ZONE_NAME = "roboshop.internal"

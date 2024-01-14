@@ -9,6 +9,12 @@ module "vpc"{
   DEFAULT_VPC_CIDR      = var.DEFAULT_VPC_CIDR
   DEFAULT_VPC_ID        = var.DEFAULT_VPC_ID
   DEFAULT_VPC_RT        = var.DEFAULT_VPC_RT
+
+  # PUBLIC_HOSTED_ZONE_NAME   = var.PUBLIC_HOSTED_ZONE_NAME
+  # PUBLIC_HOSTED_ZONE_ID     = var.PUBLIC_HOSTED_ZONE_ID
+
+  PRIVATE_HOSTED_ZONE_NAME  = var.PRIVATE_HOSTED_ZONE_NAME
+  PRIVATE_HOSTED_ZONE_ID    = var.PRIVATE_HOSTED_ZONE_ID
 }
 
 # We cannot parameterize anything that's added in the source
