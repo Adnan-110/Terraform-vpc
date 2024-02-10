@@ -13,17 +13,17 @@ pipeline{
         stage('Terraform init') {
             steps{
                 sh "terrafile -f env-dev/Terrafile"
-                sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars"
+                sh "terraform init -backend-config=env-${ENV}/${ENV}-backend.tfvars -reconfigure"
             }
         }
         stage('Terraform plan') {
             steps{
-                sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars"
+                sh "terraform plan -var-file=env-${ENV}/${ENV}.tfvars -var ENV=${ENV}"
         }
         }
         stage('Terraform Apply/Destroy') {
             steps{
-               sh "terraform ${ACTION} -auto-approve -var-file=env-${ENV}/${ENV}.tfvars"
+               sh "terraform ${ACTION} -auto-approve -var-file=env-${ENV}/${ENV}.tfvars -var ENV=${ENV}"
             }
         }
     }
